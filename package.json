@@ -1,0 +1,24 @@
+{
+  "name": "messages-desktop",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r   <img src=\"https://i.imgur.com/S5SqQuA.png\" style=\"display: block;margin-left: auto;margin-right: auto;\" data-canonical-src=\"https://bot.ender.site/img/dot.png\" width=\"200\" height=\"200\" align=\"center\"/>\r </p>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnderAndFireDev/messages-desktop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EnderAndFireDev/messages-desktop/issues"
+  },
+  "homepage": "https://github.com/EnderAndFireDev/messages-desktop#readme",
+  "devDependencies": {
+    "electron": "^5.0.7",
+    "electron-nightly": "^7.0.0-nightly.20190721"
+  },
+  "dependencies": {}
+}

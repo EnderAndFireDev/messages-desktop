@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Messages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+
+<body style="
+    overflow-x: hidden; margin: 0px;
+">
+
+    <div style="
+        margin-left: 339px;
+        border-left: 1px #dadce0 solid;
+        margin-bottom: 6px;
+        font-size: 100px;
+        height: 100%;
+        user-select: none;
+        display: none;
+        color: transparent;
+    " id="line">_</div>
+    <header id="titlebar" style="
+">
+
+        <div id="drag-region">
+            <div id="window-controls">
+                <div class="button" id="min-button">
+                    <span></span>
+                </div>
+                <div class="button" id="close-button">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <webview id="wv" src="https://messages.google.com/web/conversations" autosize="on" minwidth="10000000000000000000" minheight="1000000000000000"></webview>
+
+    <script>
+        
+        var wv = document.querySelector("#wv")
+
+        setTimeout(function() {
+            setInterval(function() {
+                if(wv.src.includes("/web/conversations") == true) {
+                    document.getElementById("line").style.display = null;
+                }
+                else {
+                    document.getElementById("line").style.display = 'none';
+                }
+            }, 1)
+        }, 3000);
+
+
+        document.getElementById("min-button").onclick = function() {
+            wdw = require("electron").remote.getCurrentWindow();
+            wdw.minimize();
+        }
+
+        document.getElementById("close-button").onclick = function() {
+            wdw = require("electron").remote.getCurrentWindow();
+            window.close()
+        }
+
+        let wdw = require("electron").remote.getCurrentWindow();
+
+    </script>
+
+</body>
+
+</html>
